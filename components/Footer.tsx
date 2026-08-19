@@ -45,7 +45,7 @@ export default function Footer() {
           </ul>
           <div className="flex gap-4 mt-4">
             {siteInfo.social.map((s) => (
-              <a key={s.label} href={s.href} target="_blank" rel="noreferrer" className="text-sm hover:text-rose transition-colors">
+              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="text-sm hover:text-rose transition-colors">
                 {s.label}
               </a>
             ))}

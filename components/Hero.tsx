@@ -9,6 +9,7 @@ export default function Hero() {
         alt="Premium beauty and skincare products arranged elegantly"
         fill
         priority
+        sizes="100vw"
         className="object-cover"
       />
       <div className="absolute inset-0 bg-charcoal/40" />

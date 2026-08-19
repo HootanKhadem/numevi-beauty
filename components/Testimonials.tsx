@@ -19,7 +19,7 @@ export default function Testimonials() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((t) => (
-            <figure key={t.name} className="bg-white/60 border border-charcoal/10 p-8">
+            <figure key={t.name} className="bg-cream/60 border border-charcoal/10 p-8">
               <span className="font-serif text-5xl text-rose/40">&ldquo;</span>
               <blockquote className="text-charcoal/80 leading-relaxed -mt-4 mb-6">{t.quote}</blockquote>
               <figcaption>

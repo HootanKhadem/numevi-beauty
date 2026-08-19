@@ -14,9 +14,12 @@ const FOCUSABLE_SELECTOR =
 export default function ProductModal({ product, onClose }: ProductModalProps) {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const dialogRef = useRef<HTMLDivElement>(null);
+  const previouslyFocusedRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     if (!product) return;
+
+    previouslyFocusedRef.current = document.activeElement as HTMLElement | null;
 
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
@@ -53,6 +56,7 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
     return () => {
       document.body.style.overflow = previousOverflow;
       document.removeEventListener('keydown', onKeyDown);
+      previouslyFocusedRef.current?.focus();
     };
   }, [product, onClose]);
 
@@ -68,21 +72,21 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
     >
       <div className="absolute inset-0 bg-charcoal/60" onClick={onClose} />
 
+      <button
+        ref={closeButtonRef}
+        aria-label="Close product details"
+        onClick={onClose}
+        className="fixed top-6 right-6 z-10 text-2xl text-charcoal bg-cream/90 w-9 h-9 flex items-center justify-center rounded-full hover:bg-cream"
+      >
+        &times;
+      </button>
+
       <div className="relative bg-cream max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
         <div className={`h-64 bg-gradient-to-br ${product.gradient} flex items-center justify-center`}>
           <span className="font-serif text-7xl text-charcoal/20">{product.brand.charAt(0)}</span>
         </div>
 
         <div className="p-8">
-          <button
-            ref={closeButtonRef}
-            aria-label="Close product details"
-            onClick={onClose}
-            className="absolute top-4 right-4 text-2xl text-charcoal bg-cream/90 w-9 h-9 flex items-center justify-center rounded-full hover:bg-cream"
-          >
-            &times;
-          </button>
-
           <span className="text-xs uppercase tracking-wider text-rose">{product.category}</span>
           <h2 id="product-modal-title" className="font-serif text-3xl mt-2 mb-1">
             {product.name}

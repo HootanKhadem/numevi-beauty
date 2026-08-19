@@ -36,7 +36,7 @@ export default function Products() {
             <button
               key={f}
               onClick={() => setActiveFilter(f)}
-              className={`px-5 py-2 text-sm uppercase tracking-wider border transition-colors ${
+              className={`px-5 py-2.5 text-sm uppercase tracking-wider border transition-colors ${
                 activeFilter === f
                   ? 'bg-charcoal text-cream border-charcoal'
                   : 'border-charcoal/20 text-charcoal hover:border-rose hover:text-rose'
