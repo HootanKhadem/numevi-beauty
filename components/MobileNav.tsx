@@ -11,11 +11,12 @@ export default function MobileNav({ open, onClose }: MobileNavProps) {
   return (
     <div
       className={`fixed inset-0 z-50 md:hidden transition-opacity duration-300 ${
-        open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        open ? 'visible opacity-100 pointer-events-auto' : 'invisible opacity-0 pointer-events-none'
       }`}
     >
       <div className="absolute inset-0 bg-charcoal/40" onClick={onClose} />
       <nav
+        id="mobile-nav"
         className={`absolute right-0 top-0 h-full w-72 bg-cream shadow-xl p-8 flex flex-col gap-6 transition-transform duration-300 ${
           open ? 'translate-x-0' : 'translate-x-full'
         }`}
