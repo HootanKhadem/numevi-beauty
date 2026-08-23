@@ -17,7 +17,7 @@ export default function About() {
         <div className="relative h-96 md:h-[520px] order-2 md:order-1">
           <Image
             src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1400&q=80"
-            alt="Numevi Beauty product curation studio"
+            alt="Kimbeca product curation studio"
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover"
@@ -30,7 +30,7 @@ export default function About() {
             A Curated Bridge Between Brands and People
           </h2>
           <p className="text-charcoal/80 leading-relaxed mb-4">
-            Numevi Beauty was founded on a simple belief: everyone deserves access to
+            Kimbeca was founded on a simple belief: everyone deserves access to
             authentic, high-quality beauty and personal care products, backed by a company
             that stands behind every item it introduces.
           </p>

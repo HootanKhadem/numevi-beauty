@@ -130,17 +130,17 @@ export const products: Product[] = [
 
 export const testimonials: Testimonial[] = [
   {
-    quote: 'Every order arrives exactly as described — authentic, well-packaged, and on time. Numevi has become our go-to distributor for the skincare lines our clients trust.',
+    quote: 'Every order arrives exactly as described — authentic, well-packaged, and on time. Kimbeca has become our go-to distributor for the skincare lines our clients trust.',
     name: 'Amara Foster',
     role: 'Owner, The Glow Room Spa',
   },
   {
-    quote: 'We evaluated several suppliers before partnering with Numevi Beauty. Their catalog quality and responsiveness put them well ahead of the rest.',
+    quote: 'We evaluated several suppliers before partnering with Kimbeca. Their catalog quality and responsiveness put them well ahead of the rest.',
     name: 'Daniel Reyes',
     role: 'Buyer, Reyes Retail Group',
   },
   {
-    quote: 'What stands out is the consistency. I know every product I discover through Numevi will be genuine and carefully vetted — that trust is hard to find.',
+    quote: 'What stands out is the consistency. I know every product I discover through Kimbeca will be genuine and carefully vetted — that trust is hard to find.',
     name: 'Priya Nandakumar',
     role: 'Loyal Customer',
   },
@@ -167,9 +167,9 @@ export const navLinks: { label: string; href: string }[] = [
 ];
 
 export const siteInfo = {
-  name: 'Numevi Beauty',
+  name: 'Kimbeca',
   tagline: 'Beauty, Elevated.',
-  email: 'hello@numevibeauty.com',
+  email: 'hello@kimbeca.com',
   phone: '+1 (555) 019-2837',
   address: '148 Madison Avenue, Suite 700, New York, NY 10016',
   social: [

@@ -1,4 +1,4 @@
-# Deploying Numevi Beauty to a Linux server
+# Deploying Kimbeca to a Linux server
 
 ## Part 1 — Manual deploy now (no domain yet)
 
@@ -12,12 +12,12 @@ No git remote is set up yet. Pick one:
   git remote add origin <your-repo-url>
   git push -u origin master
   ```
-  Then on the server: `git clone <your-repo-url> numevi-beauty`
+  Then on the server: `git clone <your-repo-url> kimbeca`
 
 - **Or skip git entirely** and copy the folder straight to the server:
   ```bash
   rsync -avz --exclude node_modules --exclude .next -e ssh \
-    "F:/work/numevi/Landing page/" user@your-server:~/numevi-beauty/
+    "F:/work/numevi/Landing page/" user@your-server:~/kimbeca/
   ```
 
 ### 1. Install Docker on the server (Ubuntu/Debian)
@@ -33,7 +33,7 @@ Confirm: `docker --version` and `docker compose version` (the compose plugin shi
 ### 2. Build and run
 
 ```bash
-cd ~/numevi-beauty
+cd ~/kimbeca
 docker compose up -d --build
 ```
 
@@ -58,7 +58,7 @@ Then open `http://localhost:3000` in your own browser.
 ### Updating later
 
 ```bash
-cd ~/numevi-beauty
+cd ~/kimbeca
 git pull            # or re-rsync
 docker compose up -d --build
 ```
@@ -79,12 +79,12 @@ sudo apt update && sudo apt install -y nginx
 
 ### 3. Add the reverse proxy config
 
-This repo already has a template at `deploy/nginx/numevi-beauty.conf`. On the server:
+This repo already has a template at `deploy/nginx/kimbeca.conf`. On the server:
 
 ```bash
-sudo cp deploy/nginx/numevi-beauty.conf /etc/nginx/sites-available/numevi-beauty
-sudo nano /etc/nginx/sites-available/numevi-beauty   # replace example.com with your real domain
-sudo ln -s /etc/nginx/sites-available/numevi-beauty /etc/nginx/sites-enabled/
+sudo cp deploy/nginx/kimbeca.conf /etc/nginx/sites-available/kimbeca
+sudo nano /etc/nginx/sites-available/kimbeca   # replace example.com with your real domain
+sudo ln -s /etc/nginx/sites-available/kimbeca /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl reload nginx
 ```

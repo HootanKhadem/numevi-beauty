@@ -21,7 +21,7 @@ export default function WhyChooseUs() {
           visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
-        <p className="uppercase tracking-[0.3em] text-sm text-rose mb-4 text-center">Why Numevi</p>
+        <p className="uppercase tracking-[0.3em] text-sm text-rose mb-4 text-center">Why Kimbeca</p>
         <h2 className="font-serif text-4xl md:text-5xl text-center mb-16">Why Choose Us</h2>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8">

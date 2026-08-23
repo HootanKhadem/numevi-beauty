@@ -20,7 +20,7 @@ export default function Hero() {
           Where Beauty Meets Trust
         </h1>
         <p className="mt-6 max-w-xl text-lg text-cream/90">
-          Numevi Beauty introduces the world&apos;s most trusted skincare, haircare, and
+          Kimbeca introduces the world&apos;s most trusted skincare, haircare, and
           personal care brands to a new generation of customers and partners.
         </p>
 

@@ -18,7 +18,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: `${siteInfo.name} — ${siteInfo.tagline}`,
   description:
-    'Numevi Beauty introduces premium, authentic beauty and personal care products across skincare, haircare, makeup, and more.',
+    'Kimbeca introduces premium, authentic beauty and personal care products across skincare, haircare, makeup, and more.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

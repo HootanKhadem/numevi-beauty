@@ -1,8 +1,8 @@
 services:
   web:
     build: .
-    image: numevi-beauty:latest
-    container_name: numevi-beauty
+    image: kimbeca:latest
+    container_name: kimbeca
     restart: unless-stopped
     ports:
       # Bound to localhost only — nginx (or an SSH tunnel for testing)
